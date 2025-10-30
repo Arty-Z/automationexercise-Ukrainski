@@ -1,5 +1,7 @@
 export const LOCATORS = {
   HOME: {
+    LOGO: 'img[alt="Website for automation practice"]',
+    NAV_BAR: 'header#header .navbar',
     SIGNUP_LOGIN_LINK: 'a[href="/login"]',
     LOGGED_IN_TEXT: 'li:has-text("Logged in as")',
     DELETE_ACCOUNT_LINK: 'a[href="/delete_account"]',
@@ -9,6 +11,10 @@ export const LOCATORS = {
     SIGNUP_NAME_INPUT: 'input[data-qa="signup-name"]',
     SIGNUP_EMAIL_INPUT: 'input[data-qa="signup-email"]',
     SIGNUP_BUTTON: 'button[data-qa="signup-button"]',
+    LOGIN_HEADER: 'h2:has-text("Login to your account")',
+    LOGIN_EMAIL_INPUT: 'input[data-qa="login-email"]',
+    LOGIN_PASSWORD_INPUT: 'input[data-qa="login-password"]',
+    LOGIN_BUTTON: 'button[data-qa="login-button"]',
   },
   SIGNUP: {
     ACCOUNT_INFO_HEADER: 'b:text-is("Enter Account Information")',
