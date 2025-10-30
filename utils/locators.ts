@@ -11,6 +11,7 @@ export const LOCATORS = {
     SIGNUP_NAME_INPUT: 'input[data-qa="signup-name"]',
     SIGNUP_EMAIL_INPUT: 'input[data-qa="signup-email"]',
     SIGNUP_BUTTON: 'button[data-qa="signup-button"]',
+    SIGNUP_ERROR_MESSAGE: 'p[style*="color: red"]',
     LOGIN_HEADER: 'h2:has-text("Login to your account")',
     LOGIN_EMAIL_INPUT: 'input[data-qa="login-email"]',
     LOGIN_PASSWORD_INPUT: 'input[data-qa="login-password"]',
