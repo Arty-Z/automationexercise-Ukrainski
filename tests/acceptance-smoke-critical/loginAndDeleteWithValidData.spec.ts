@@ -127,7 +127,7 @@ test.describe('Login and Delete Account Flow', () => {
     });
 
     await test.step('Verify Logged in as username in header', async () => {
-      await page.waitForSelector(LOCATORS.HOME.LOGGED_IN_TEXT, { state: 'visible' });
+      await page.waitForLoadState('networkidle');
       const isLoggedInVisible = await homePage.isLoggedInVisible();
       expect(isLoggedInVisible).toBeTruthy();
     });
