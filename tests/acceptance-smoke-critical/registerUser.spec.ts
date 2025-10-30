@@ -4,6 +4,7 @@ import { SignupLoginPage } from '../../pages/signupLogin.page';
 import { SignupPage } from '../../pages/signup.page';
 import { AccountCreatedPage } from '../../pages/accountCreated.page';
 import { AccountDeletedPage } from '../../pages/accountDeleted.page';
+import { LOCATORS } from '../../utils/locators';
 import {
   generateRandomName,
   generateRandomEmail,
@@ -130,6 +131,7 @@ test.describe('User Registration Flow', () => {
     await homePage.clickDeleteAccount();
     await expect(page).toHaveURL(URL_PATTERNS.DELETE_ACCOUNT);
 
+    await page.waitForSelector(LOCATORS.ACCOUNT_DELETED.HEADER, { state: 'visible' });
     const isAccountDeletedVisible = await accountDeletedPage.isAccountDeletedVisible();
     expect(isAccountDeletedVisible).toBeTruthy();
 
