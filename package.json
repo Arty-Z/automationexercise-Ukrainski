@@ -1,0 +1,30 @@
+{
+  "name": "automationexercise-ukrainski",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "codegen": "npx playwright codegen",
+    "report": "npx playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arty-Z/automationexercise-Ukrainski.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Arty-Z/automationexercise-Ukrainski/issues"
+  },
+  "homepage": "https://github.com/Arty-Z/automationexercise-Ukrainski#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
