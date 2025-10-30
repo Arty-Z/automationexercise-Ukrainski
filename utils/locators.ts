@@ -15,6 +15,7 @@ export const LOCATORS = {
     LOGIN_EMAIL_INPUT: 'input[data-qa="login-email"]',
     LOGIN_PASSWORD_INPUT: 'input[data-qa="login-password"]',
     LOGIN_BUTTON: 'button[data-qa="login-button"]',
+    LOGIN_ERROR_MESSAGE: 'p[style*="color: red"]',
   },
   SIGNUP: {
     ACCOUNT_INFO_HEADER: 'b:text-is("Enter Account Information")',
