@@ -22,8 +22,10 @@
   },
   "homepage": "https://github.com/Arty-Z/automationexercise-Ukrainski#readme",
   "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
     "@playwright/test": "^1.56.1",
     "@types/node": "^24.9.2",
+    "dotenv": "^17.2.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
