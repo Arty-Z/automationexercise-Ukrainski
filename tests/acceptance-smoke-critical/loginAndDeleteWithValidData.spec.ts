@@ -4,6 +4,7 @@ import { SignupLoginPage } from '../../pages/signupLogin.page';
 import { SignupPage } from '../../pages/signup.page';
 import { AccountCreatedPage } from '../../pages/accountCreated.page';
 import { AccountDeletedPage } from '../../pages/accountDeleted.page';
+import { LOCATORS } from '../../utils/locators';
 import { 
   generateRandomName,
   generateRandomEmail,
@@ -111,6 +112,7 @@ test.describe('Login and Delete Account Flow', () => {
     });
 
     await test.step('Verify Login to your account is visible', async () => {
+      await page.waitForSelector(LOCATORS.SIGNUP_LOGIN.LOGIN_HEADER, { state: 'visible' });
       const isLoginHeaderVisible = await signupLoginPage.isLoginHeaderVisible();
       expect(isLoginHeaderVisible).toBeTruthy();
     });
@@ -125,6 +127,7 @@ test.describe('Login and Delete Account Flow', () => {
     });
 
     await test.step('Verify Logged in as username in header', async () => {
+      await page.waitForLoadState('networkidle');
       const isLoggedInVisible = await homePage.isLoggedInVisible();
       expect(isLoggedInVisible).toBeTruthy();
     });

@@ -11,6 +11,7 @@ export class SignupLoginPage {
   readonly loginEmailInput: Locator;
   readonly loginPasswordInput: Locator;
   readonly loginButton: Locator;
+  readonly loginErrorMessage: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -22,6 +23,7 @@ export class SignupLoginPage {
     this.loginEmailInput = page.locator(LOCATORS.SIGNUP_LOGIN.LOGIN_EMAIL_INPUT);
     this.loginPasswordInput = page.locator(LOCATORS.SIGNUP_LOGIN.LOGIN_PASSWORD_INPUT);
     this.loginButton = page.locator(LOCATORS.SIGNUP_LOGIN.LOGIN_BUTTON);
+    this.loginErrorMessage = page.locator(LOCATORS.SIGNUP_LOGIN.LOGIN_ERROR_MESSAGE);
   }
 
   async isNewUserSignupVisible(): Promise<boolean> {
@@ -48,5 +50,13 @@ export class SignupLoginPage {
 
   async clickLogin() {
     await this.loginButton.click();
+  }
+
+  async isLoginErrorVisible(): Promise<boolean> {
+    return await this.loginErrorMessage.isVisible();
+  }
+
+  async getLoginErrorMessage(): Promise<string> {
+    return await this.loginErrorMessage.textContent() || '';
   }
 }
