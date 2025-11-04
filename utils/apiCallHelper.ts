@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-const API_BASE_URL = 'https://automationexercise.com/api';
+const API_BASE_URL = process.env.API_BASE_URL || 'https://automationexercise.com/api';
 
 interface APIResponse {
   status: number;
